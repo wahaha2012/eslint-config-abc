@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-abc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint auto config tool",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "commander": "^2.6.0",
     "fs": "0.0.2",
     "inquirer": "^1.2.2",
-    "package-merge": "^0.1.2",
+    "merge-pkg": "^0.1.1",
     "path": "^0.4.9",
     "shelljs": "^0.3.0"
   }
