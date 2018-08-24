@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "eslint": "eslint --ext .js,.vue src",
+    "eslint:fix": "eslint --fix --ext .js,.vue src"
+  },
+  "pre-commit": [ "eslint" ],
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-dada": "^1.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-import-resolver-webpack": "^0.10.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "pre-commit": "^1.2.2"
+  }
+}
