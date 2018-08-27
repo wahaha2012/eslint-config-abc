@@ -37,6 +37,16 @@ var app = {
     
   },
 
+  // add eslint loader to webpack
+  // addESLintLoader: function(callback) {
+  //   try {
+  //     console.log(clc.notice('add eslit loader successfully'));
+  //     callback();
+  //   } catch (err) {
+  //     callback(new Error('failed to config eslint loader'));
+  //   }
+  // },
+
   //install project npm dependencies
   installDependencies: function(callback) {
     console.log(clc.info(currentStep++ + '. install node modules'));
@@ -54,6 +64,7 @@ var app = {
   //finished init
   initFinished: function(callback) {
     console.log(clc.info(currentStep++ + '. lint config setting finished!'));
+    console.log(clc.warn('Please add eslint loader settings from .webpack-eslint-loader.sample.js to your webpack config'));
     console.log('***************************');
     console.log('$ npm/yarn install');
     console.log('$ npm run eslint');

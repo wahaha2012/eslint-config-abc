@@ -23,7 +23,10 @@ function start() {
     type: 'list',
     name: 'architecture',
     message: 'Please select lint styles config for your project:',
-    choices: ['eslint-airbnb-vue']
+    choices: [
+      'eslint-airbnb-vue',
+      'eslint-dada-vue',
+    ]
   }]).then(function(answers) {
     require('../src/init-common').init({
       path: answers.architecture
