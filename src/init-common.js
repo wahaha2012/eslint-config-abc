@@ -64,7 +64,9 @@ var app = {
   //finished init
   initFinished: function(callback) {
     console.log(clc.info(currentStep++ + '. lint config setting finished!'));
-    console.log(clc.warn('Please add eslint loader settings from .webpack-eslint-loader.sample.js to your webpack config'));
+    if (["eslint-prettier"].indexOf(app.options.path) === -1) {
+      console.log(clc.warn('Please add eslint loader settings from .webpack-eslint-loader.sample.js to your webpack config'));
+    }
     console.log('***************************');
     console.log('$ npm/yarn install');
     console.log('$ npm run eslint');
