@@ -3,7 +3,7 @@ var clc = require('./colors'),
   shelljs = require('shelljs'),
   async = require('async'),
   fs = require('fs'),
-  mergePkg = require('merge-pkg');
+  merge = require('lodash/merge');
 var currentStep = 1;
 var app = {
   //add lint config to project
@@ -26,7 +26,7 @@ var app = {
       var resourcesPath = '/../resources/' + app.options.path + '/';
       var resPkg = fs.readFileSync(__dirname + resourcesPath + 'package.json', 'utf-8');
       var proPkg = fs.readFileSync('./package.json', 'utf-8');
-      var destPkg = mergePkg(JSON.parse(proPkg), JSON.parse(resPkg));
+      var destPkg = merge(JSON.parse(proPkg), JSON.parse(resPkg));
 
       fs.writeFileSync('./package.json', JSON.stringify(destPkg, null, 2));
       console.log(clc.notice('package.json update successfully'));
