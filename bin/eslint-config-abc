@@ -22,10 +22,11 @@ function start() {
   inquirer.prompt([{
     type: 'list',
     name: 'architecture',
-    message: 'Please select lint styles config for your project:',
+    message: 'Please select lint config for your project:',
     choices: [
+      'eslint-prettier',
       'eslint-airbnb-vue',
-      'eslint-dada-vue',
+      'eslint-dada-vue'
     ]
   }]).then(function(answers) {
     require('../src/init-common').init({
